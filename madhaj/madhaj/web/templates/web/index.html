@@ -1,0 +1,114 @@
+{% extends "web/layout.html" %}
+{% load static %}
+
+
+{% block body %}
+    <!-- ================ Header ================ -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="{% url 'index' %}" class="nav__logo">
+                <img src="{% static 'web/img/download-296x82.png' %}" alt="madhaj">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="{% url 'index' %}" class="nav__link active-link">خانه</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">مشاوره</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__btns">
+                <div class="login__toggle" id="login-toggle">
+                    <span class="material-symbols-outlined">
+                        account_circle
+                    </span>
+                </div>
+
+                <div class="nav__shop" id="cart-shop">
+                    <span class="material-symbols-outlined">
+                        shopping_bag
+                    </span>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <span class="material-symbols-outlined">
+                        apps
+                    </span>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+
+
+    <!-- ================ Main ================ -->
+    <main class="main">
+        <!-- ================ Home ================ -->
+        <section class="home container">
+
+            <div class="swiper home-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Home swiper-1 -->
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="{% static 'web/img/kafsh.jpg' %}" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+        
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">"محمد امین کفاشان"</h4>
+                                    <span class="home__details-subtitle">فرهنگی ثروتمند</span>
+                                </div>
+                            </div>
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#1🏆 The most expensive course</h3>
+                                <h1 class="home__title">!!!دوره فرهنگیان ثروتمند و توسعه گر<br>😱به همراه پکیج فکر اقتصادی<br> از مقدماتی تا متوسط</h1>
+                                <p class="home__description">All you need to become rich and billionaire.</p>
+
+                                <div class="home__buttons">
+                                    <a href="{% url 'counseling_kafsh' %}" class="button">الان بخر</a>
+                                    <a href="https://www.aparat.com/v/xXThO" class="button--link button--flex">بیشتر ببینید <span class="material-symbols-outlined button__icon">rocket_launch</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Home swiper-2 -->
+                    <section class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="{% static 'web/img/mohsen_modhej_wikipedia-768x1024.jpeg' %}" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+        
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">"محسن مدحج"</h4>
+                                    <span class="home__details-subtitle">برنامه نویس ثروتمند</span>
+                                </div>
+                            </div>
+        
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#1🏆 The most expensive course</h3>
+                                <h1 class="home__title">!!! دوره برنامه نویس ثروتمند<br>😨به همراه ذهنیت برنامه نویس ثروت ساز<br> از مقدماتی تا متوسط</h1>
+                                <p class="home__description">.رسیدن تو به رویاهایت با برنامه نویسی آرزوی قلبی من است</p>
+
+                                <div class="home__buttons">
+                                    <a href="{% url 'counseling_madhaj' %}" class="button">الان بخر</a>
+                                    <a href="https://mohsenmodhej.com/about-us/" class="button--link button--flex">بیشتر ببینید <span class="material-symbols-outlined button__icon">rocket_launch</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+        
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'web/layout.html' %}
+
+{% block body %}
+    
+    <div class="login" id="login">
+        <ul>
+            <li class="nav__item">
+                <a href="{% url 'index' %}" class="nav__link active-link">خانه</a>
+            </li>
+        </ul>
+
+        <h2 class="login__title-center">دریافت مشاوره و خرید دوره ی </h2>
+        <h2 class="login__title-center">برنامه نویس ثروتمند</h2>
+        <span class="cart__price login__title-center" style="font-size: 20px;">﷼80,000,000</span>
+
+        <form action="" method="post" class="login__form grid">
+            {% csrf_token %}
+            <div class="login__content">
+                <label for="" class="login__label">نام و نام خانوادگی :</label>
+                {{ form.name }}
+            </div>
+            
+            <div class="login__content">
+                <label for="" class="login__label">شماره :</label>
+                {{ form.number }}
+            </div>
+
+            <div>
+                <input type="submit" class="button" value="ارسال" id="tt">
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
